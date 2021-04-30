@@ -25,7 +25,7 @@ Each boid also tries to avoid running into the other boids. If it gets too close
 
 ### 3. Alignment
 
-Finally, each boid tries to match the vector (speed and direction) of the other boids around it. Again, you can control how quickly they try to match vectors using the `centeringFactor` variable. In the demo, you can adjust this from 0 to 0.1 with the "coherence" slider.
+Finally, each boid tries to match the vector (speed and direction) of the other boids around it. Again, you can control how quickly they try to match vectors using the `matchingFactor` variable. In the demo, you can adjust this from 0 to 0.1 with the "coherence" slider.
 
 ## Visual range
 

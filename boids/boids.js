@@ -1,9 +1,32 @@
+// modifiable parameters
+
+// strength of attractive force pulling boids toward nearby boids
+// (default value 0.005; typical values from 0 to 0.01)
+const attractiveFactor = 0.005;
+
+// strength of alignment force
+// (default value 0.05; typical values from 0 to 0.1)
+const alignmentFactor = 0.05;
+
+// strength of repulsive force pushing boids away from others who are too close
+// (default value 0.05; typical values from 0 to 0.1)
+const avoidFactor = 0.05;
+
+// distance each boid can see
+// (default value 75)
+const visualRange = 75;
+
+// number of boids
+// (default value 100)
+const numBoids = 100;
+
+// set to 'true' to draw trails behind boids
+const DRAW_TRAIL = false;
+
+
 // Size of canvas. These get updated to fill the whole browser.
 let width = 150;
 let height = 150;
-
-const numBoids = 100;
-const visualRange = 75;
 
 var boids = [];
 
@@ -69,7 +92,7 @@ function keepWithinBounds(boid) {
 // Find the center of mass of the other boids and adjust velocity slightly to
 // point towards the center of mass.
 function flyTowardsCenter(boid) {
-  const centeringFactor = 0.005; // adjust velocity by this %
+  //const attractiveFactor = 0.005; // adjust velocity by this %
 
   let centerX = 0;
   let centerY = 0;
@@ -87,15 +110,15 @@ function flyTowardsCenter(boid) {
     centerX = centerX / numNeighbors;
     centerY = centerY / numNeighbors;
 
-    boid.dx += (centerX - boid.x) * centeringFactor;
-    boid.dy += (centerY - boid.y) * centeringFactor;
+    boid.dx += (centerX - boid.x) * attractiveFactor;
+    boid.dy += (centerY - boid.y) * attractiveFactor;
   }
 }
 
 // Move away from other boids that are too close to avoid colliding
 function avoidOthers(boid) {
   const minDistance = 20; // The distance to stay away from other boids
-  const avoidFactor = 0.05; // Adjust velocity by this %
+  //const avoidFactor = 0.05; // Adjust velocity by this %
   let moveX = 0;
   let moveY = 0;
   for (let otherBoid of boids) {
@@ -114,7 +137,7 @@ function avoidOthers(boid) {
 // Find the average velocity (speed and direction) of the other boids and
 // adjust velocity slightly to match.
 function matchVelocity(boid) {
-  const matchingFactor = 0.05; // Adjust by this % of average velocity
+  //const alignmentFactor = 0.05; // Adjust by this % of average velocity
 
   let avgDX = 0;
   let avgDY = 0;
@@ -132,8 +155,8 @@ function matchVelocity(boid) {
     avgDX = avgDX / numNeighbors;
     avgDY = avgDY / numNeighbors;
 
-    boid.dx += (avgDX - boid.dx) * matchingFactor;
-    boid.dy += (avgDY - boid.dy) * matchingFactor;
+    boid.dx += (avgDX - boid.dx) * alignmentFactor;
+    boid.dy += (avgDY - boid.dy) * alignmentFactor;
   }
 }
 
@@ -148,8 +171,6 @@ function limitSpeed(boid) {
     boid.dy = (boid.dy / speed) * speedLimit;
   }
 }
-
-const DRAW_TRAIL = false;
 
 function drawBoid(ctx, boid) {
   const angle = Math.atan2(boid.dy, boid.dx);
