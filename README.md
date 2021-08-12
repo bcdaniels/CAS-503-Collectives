@@ -1,6 +1,6 @@
 # CAS 503: Collectives
 
-This repository contains coding examples and exercises for ASU's course CAS 503 — Fundamentals of Complex Systems Science: Collectives.
+This repository contains coding examples and exercises for Arizona State University's course CAS 503 — Fundamentals of Complex Systems Science: Collectives.
 
 Instructor: Bryan Daniels
 
@@ -22,6 +22,6 @@ If you already have a different favorite way of running Python code, feel free t
 
 ### Setting up this git repository
 
-The _simplest_ way to access the code in this repository is to download a zip file containing all its files by clicking the green "Code" button on the webpage for this repository: https://github.com/bcdaniels/CAS-503-Collectives 
+The _simplest_ way to access the code in this repository is to download a zip file containing all its files by clicking the green "Code" button and then "Download ZIP" on the webpage for this repository: https://github.com/bcdaniels/CAS-503-Collectives 
 
 A perhaps _better_ way to access the code is to use `git`, a widely-used tool for version control.  This is not required for the course, but it is something you will definitely want practice using if you are aiming for a career involving any kind of collaborative coding.  Running `git clone https://github.com/bcdaniels/CAS-503-Collectives.git` at a command line will create a subdirectory containing a copy of the code as a full `git` repository, with all the version control powers that entails.  There are plenty of places to get introduced to the basics of `git`.  A good start would be to review [the basic git commands](https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/) and [the popular github workflow](https://guides.github.com/introduction/flow/).
