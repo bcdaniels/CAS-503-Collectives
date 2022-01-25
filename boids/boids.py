@@ -6,10 +6,12 @@
 # Helper code for launching boids javascript simulation from a jupyter notebook.
 #
 
+from pathlib import Path # to handle file paths across all operating systems
+
 def setupBoidsSimulation(attractiveFactor,alignmentFactor,avoidFactor,
     visualRange=75,numBoids=100,drawTrail=False,
-    originalFilename='./boids/index.html',
-    modifiedFilename='./boids/index-modified.html'):
+    originalFilename=Path('./boids/index.html'),
+    modifiedFilename=Path('./boids/index-modified.html')):
     """
     Write a modified boids simulation HTML file with parameters set
     according to input arguments.
