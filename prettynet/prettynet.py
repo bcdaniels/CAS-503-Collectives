@@ -15,14 +15,14 @@ import matplotlib.cm as cm
 import matplotlib.pyplot as plt
 import numpy as np
 
-def view(G, node_size=2000, font_size=22, font_color="white", **kwargs):
+def view(G, node_size=2000, font_size=22, font_color="white", figsize=(10,10), **kwargs):
     """
     Draws the graph G using a default networkx layout.
     
     For a description of keyword arguments, see documentation
     for prettynet.nx.draw.
     """
-    plt.figure(figsize=(10,10))
+    plt.figure(figsize=figsize)
     
     # compute layout of nodes
     pos = nx.kamada_kawai_layout(G)
