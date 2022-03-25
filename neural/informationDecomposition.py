@@ -6,6 +6,9 @@
 # Implement Williams and Beer pairwise mutual information decomposition.
 #
 # Branched from mutualInfo.py (4.2.2012)
+#
+# Note: An updated version that includes NSB entropy estimation can be
+# found in toolbox/informationDecomposition.
 
 import numpy as np
 import warnings
