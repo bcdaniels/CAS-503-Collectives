@@ -16,7 +16,7 @@ This course will use coding examples and exercises written in the programming la
 
 ### Setting up Python and Jupyter
 
-To run Python and Jupyter on your own computer, we recommend installing the Anaconda package, available for Windows, Mac, and Linux here: https://www.anaconda.com/products/individual
+To run Python and Jupyter on your own computer, we recommend installing the Anaconda package, available for Windows, Mac, and Linux here: https://www.anaconda.com/products/distribution
 
 If you already have a different favorite way of running Python code, feel free to use what you are most comfortable with.  We will identify any dependencies on packages outside of Python and Jupyter so you will know exactly what you will need (likely standard data science packages included in Anaconda such as `numpy`, `matplotlib`, and `pandas`).
 
